@@ -44,34 +44,49 @@ function App() {
   };
   const ratingch = (event) => {
     setRatingf(event.target.value);
-    setData(save.filter((item) => item.rating >= event.target.value));
+    if(event.target.value === "lowr"){
+      const sortedData = [...save].sort((a, b) => {
+        return a.rating - b.rating;
+      });
+      setData(sortedData);
+    }else{
+      const sortedData = [...save].sort((a, b) => {
+        return b.rating - a.rating;
+      });
+      setData(sortedData);
+    }
+    
   };
   const discountch = (event) => {
     setDiscountf(event.target.value);
-    setData(
-      save.filter((item) => item.discountPercentage >= event.target.value)
-    );
+    if(event.target.value === "lowd"){
+      const sortedData = [...save].sort((a, b) => {
+        return a.discountPercentage - b.discountPercentage;
+      });
+      setData(sortedData);
+    }else{
+      const sortedData = [...save].sort((a, b) => {
+        return b.discountPercentage - a.discountPercentage;
+      });
+      setData(sortedData);
+    }
   };
   const pricech = (event) => {
     setpricef(event.target.value);
-    if (event.target.value === "over") {
-      setData(save.filter((item) => item.price > event.target.value));
-      console.log(event.target.value);
-    } else if (event.target.value === "low") {
+    if (event.target.value === "low") {
       const sortedData = [...save].sort((a, b) => {
         return a.price - b.price;
       });
       setData(sortedData);
-    } else if (event.target.value === "high") {
+    } else{
       const sortedData = [...save].sort((a, b) => {
         return b.price - a.price;
       });
       setData(sortedData);
-    } else {
-      setData(save.filter((item) => item.price <= event.target.value));
-      console.log(event.target.value);
     }
   };
+
+  
 
   const fetchData = async () => {
     try {
@@ -116,31 +131,20 @@ function App() {
           <div className="filter">
             <h4>Rating</h4>
             <select className="drop" value={ratingf} onChange={ratingch}>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
+              <option value="lowr">Low to High</option>
+              <option value="highr">High to Low</option>
             </select>
           </div>
           <div className="filter">
             <h4>Discount</h4>
             <select className="drop" value={discountf} onChange={discountch}>
-              <option value="50">50% or more</option>
-              <option value="35">35% or more</option>
-              <option value="25">25% or more</option>
-              <option value="15">15% or more</option>
-              <option value="10">10% or more</option>
+              <option value="lowd">Low to High</option>
+              <option value="highd">High to Low</option>
             </select>
           </div>
           <div className="filter">
             <h4>Price</h4>
             <select className="drop" value={pricef} onChange={pricech}>
-              <option value="1000">Under &#8377;1,000</option>
-              <option value="5000">Under &#8377;5,000</option>
-              <option value="10000">Under &#8377;10,000</option>
-              <option value="20000">Under &#8377;20,000</option>
-              <option value="over">Over &#8377;20,000</option>
               <option value="low">Low to High</option>
               <option value="high">High to Low</option>
             </select>
