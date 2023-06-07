@@ -10,16 +10,13 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* height: 100%; */
   background-image: linear-gradient(to bottom right, #f8f5f5, #00f8f5);
 }
 .app {
   display: flex;
-  height: 100vh;
 }
 .sidebar {
   width: 250px;
-  /* background-color: darkcyan; */
   background-image: linear-gradient(to bottom right, #121010, #237776);
   color: ghostwhite;
   position: fixed;
