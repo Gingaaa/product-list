@@ -20,9 +20,6 @@ function App() {
   const [discountf, setDiscountf] = useState("");
   const [pricef, setpricef] = useState("");
 
-  const handleChange = (event) => {
-    setSelectedOption(event.target.value);
-  };
   const brandch = (event) => {
     setbrandf(event.target.value);
     setData(save.filter((item) => item.brand == event.target.value));
