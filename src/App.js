@@ -88,6 +88,11 @@ function App() {
 
   const clearfilter = ()=>{
     setData(save);
+    setbrandf('');
+    setCategoryf('');
+    setRatingf('');
+    setDiscountf('');
+    setpricef('');
   }
 
   
