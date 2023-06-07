@@ -133,9 +133,10 @@ body {
   font-size: 14px;
 }
 .stock {
-  font-size: 16px;
+  font-size: 14px;
   display: block;
-  color: green;
+  font-weight: 600;
+  color: #12b812;
 }
 .stocke {
   font-size: 12px;
