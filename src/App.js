@@ -18,10 +18,11 @@ function App() {
   const [ratingf, setRatingf] = useState("");
   const [discountf, setDiscountf] = useState("");
   const [pricef, setpricef] = useState("");
+  const [branddata, setBranddata] = useState([]);
+  const [catdata, setCatdata] = useState([]);
 
   const brandch = (event) => {
     setbrandf(event.target.value);
-    setData(save.filter((item) => item.brand == event.target.value));
     if (categoryf != "") {
       setData(
         save.filter(
@@ -29,42 +30,47 @@ function App() {
             item.category == categoryf && item.brand == event.target.value
         )
       );
+      setBranddata(data);
+    } else {
+      setData(save.filter((item) => item.brand == event.target.value));
+      setBranddata(data);
     }
   };
   const categorych = (event) => {
     setCategoryf(event.target.value);
-    setData(save.filter((item) => item.category == event.target.value));
     if (brandf != "") {
       setData(
         save.filter(
           (item) => item.category == event.target.value && item.brand == brandf
         )
       );
+      setCatdata(data);
+    } else {
+      setData(save.filter((item) => item.category == event.target.value));
     }
   };
   const ratingch = (event) => {
     setRatingf(event.target.value);
-    if(event.target.value === "lowr"){
+    if (event.target.value === "lowr") {
       const sortedData = [...save].sort((a, b) => {
         return a.rating - b.rating;
       });
       setData(sortedData);
-    }else{
+    } else {
       const sortedData = [...save].sort((a, b) => {
         return b.rating - a.rating;
       });
       setData(sortedData);
     }
-    
   };
   const discountch = (event) => {
     setDiscountf(event.target.value);
-    if(event.target.value === "lowd"){
+    if (event.target.value === "lowd") {
       const sortedData = [...save].sort((a, b) => {
         return a.discountPercentage - b.discountPercentage;
       });
       setData(sortedData);
-    }else{
+    } else {
       const sortedData = [...save].sort((a, b) => {
         return b.discountPercentage - a.discountPercentage;
       });
@@ -78,7 +84,7 @@ function App() {
         return a.price - b.price;
       });
       setData(sortedData);
-    } else{
+    } else {
       const sortedData = [...save].sort((a, b) => {
         return b.price - a.price;
       });
@@ -86,16 +92,14 @@ function App() {
     }
   };
 
-  const clearfilter = ()=>{
+  const clearfilter = () => {
     setData(save);
-    setbrandf('');
-    setCategoryf('');
-    setRatingf('');
-    setDiscountf('');
-    setpricef('');
-  }
-
-  
+    setbrandf("");
+    setCategoryf("");
+    setRatingf("");
+    setDiscountf("");
+    setpricef("");
+  };
 
   const fetchData = async () => {
     try {
@@ -178,7 +182,9 @@ function App() {
                     </option>
                   ))}
                 </select>
-                <button className="clear" onClick={clearfilter}>Clear filter</button>
+                <button className="clear" onClick={clearfilter}>
+                  Clear filter
+                </button>
               </div>
             </div>
             {data.map((item, index) => (
