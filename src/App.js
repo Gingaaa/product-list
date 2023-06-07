@@ -74,6 +74,11 @@ function App() {
     }
   };
 
+  const addcart = () => {
+    setAdded(added + 1);
+    alert("Item is added");
+  };
+
   useEffect(() => {
     fetchData();
   }, []);
@@ -175,18 +180,9 @@ function App() {
                   {item.stock < 50 ? (
                     <span className="stocke">hurry! only a few items left</span>
                   ) : null}
-                  <div className="additem">
-                    <img
-                      src={carts}
-                      onClick={() => setAdded(added + 1)}
-                      className="plus"
-                    />
+                  <div className="additem" onClick={addcart}>
+                    <img src={carts} className="plus" />
                     <span className="carttext"> Add to cart</span>
-                    {/* <img
-                      src={minus}
-                      onClick={() => setAdded(added - 1)}
-                      className="minus"
-                    /> */}
                   </div>
                 </div>
               </div>
