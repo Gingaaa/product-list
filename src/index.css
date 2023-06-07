@@ -72,6 +72,7 @@ body {
   border-radius: 12px;
   color: white;
   text-align: center;
+  margin-left: 3px;
 }
 .mainb {
   padding: 20px;
@@ -80,6 +81,7 @@ body {
 .pimg {
   width: 370px;
   height: -webkit-fill-available;
+  border-radius: 17px;
 }
 .pimgs {
   width: 14px;
@@ -90,10 +92,12 @@ body {
   height: 260px;
   margin: 20px;
   box-shadow: 0px 0px 2px -1px;
+  border-radius: 17px;
 }
 .divimg {
   padding: 10px;
   background-color: #e1e1e1;
+  border-radius: 17px;
 }
 .content {
   padding: 10px;
