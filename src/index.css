@@ -117,6 +117,7 @@ body {
 .sign {
   font-size: 14px;
   margin-top: 4px;
+  font-weight: 500;
   position: absolute;
 }
 .discountp {

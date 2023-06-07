@@ -173,7 +173,7 @@ function App() {
                       M.R.P : <span className="textc">&#8377;{item.price}</span>{" "}
                     </span>
                     <span className="discount">
-                      ({item.discountPercentage}% off)
+                      ({item.discountPercentage.toFixed(0)}% off)
                     </span>
                   </h2>
                   <span className="stock">Available Stock : {item.stock}</span>
