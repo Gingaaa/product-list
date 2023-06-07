@@ -1,0 +1,153 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+}
+.app {
+  display: flex;
+  height: 100vh;
+}
+.sidebar {
+  width: 250px;
+  background-color: darkcyan;
+  color: ghostwhite;
+  position: fixed;
+  bottom: 0;
+  top: 0;
+}
+.main {
+  width: -webkit-fill-available;
+  padding: 26px;
+  height: -webkit-fill-available;
+  margin-left: 252px;
+}
+.filter {
+  padding: 30px;
+}
+.drop {
+  height: 23px;
+  background-color: #eeeeee;
+  border-radius: 6px;
+  width: 145px;
+}
+.dropb {
+  height: 23px;
+  background-color: #eeeeee;
+  border-radius: 6px;
+}
+.mainh {
+  display: flex;
+  justify-content: space-between;
+  background-color: lightgray;
+  padding: 20px;
+  height: 40px;
+}
+.added {
+  display: flex;
+}
+.cart {
+  width: 37px;
+  height: 37px;
+}
+.value {
+  width: 20px;
+  height: 23px;
+  background-color: red;
+  border-radius: 12px;
+  color: white;
+  text-align: center;
+}
+.mainb {
+  padding: 20px;
+}
+.pimg {
+  width: 370px;
+  height: -webkit-fill-available;
+}
+.pimgs {
+  width: 14px;
+  height: 14px;
+}
+.container {
+  display: flex;
+  height: 260px;
+  margin: 20px;
+  box-shadow: 0px 0px 2px -1px;
+}
+.divimg {
+  padding: 10px;
+  background-color: #e1e1e1;
+}
+.content {
+  padding: 10px;
+  width: -webkit-fill-available;
+}
+.ptitle {
+  font-size: 22px;
+  font-weight: 500;
+}
+.pdescription {
+  font-size: 19px;
+  font-weight: 400;
+}
+.prating {
+  font-size: 14px;
+}
+.sign {
+  font-size: 14px;
+  margin-top: 4px;
+  position: absolute;
+}
+.discountp {
+  margin-left: 10px;
+  font-size: 27px;
+  font-weight: 500;
+}
+.price {
+  font-size: 14px;
+  font-weight: 500;
+  color: #625e5e;
+}
+.textc {
+  text-decoration: line-through;
+}
+.discount {
+  font-size: 14px;
+}
+.stock {
+  font-size: 16px;
+  display: block;
+  color: green;
+}
+.stocke {
+  font-size: 12px;
+  color: red;
+  font-weight: 600;
+}
+.pcont {
+  padding-bottom: 8px;
+}
+.pconta {
+  padding-bottom: 14px;
+}
+.plus {
+  width: 40px;
+  height: 40px;
+}
+.minus {
+  width: 25px;
+  height: 25px;
+}
+.additem {
+  display: flex;
+  align-items: center;
+}
