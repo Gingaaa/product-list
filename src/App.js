@@ -4,8 +4,6 @@ import axios from "axios";
 import cart from "./assets/images/shopping-cart.png";
 import carts from "./assets/images/cart.png";
 import star from "./assets/images/star.png";
-import plus from "./assets/images/plus.png";
-import minus from "./assets/images/minus.png";
 
 function App() {
   const [data, setData] = useState([]);
