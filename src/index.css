@@ -13,7 +13,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: linear-gradient(to bottom right, #f8f5f5, #00f8f5);
+  background-image: linear-gradient(to bottom right, #ffffff, #b3fffe);
 }
 .app {
   display: flex;
