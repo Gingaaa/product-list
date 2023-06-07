@@ -134,6 +134,7 @@ function App() {
           <div className="filter">
             <h4>Category</h4>
             <select className="drop" value={categoryf} onChange={categorych}>
+              <option value="">Select category</option>
               {category.map((item, index) => (
                 <option key={index} value={item}>
                   {item}
@@ -144,6 +145,7 @@ function App() {
           <div className="filter">
             <h4>Rating</h4>
             <select className="drop" value={ratingf} onChange={ratingch}>
+              <option value="">Select rating</option>
               <option value="lowr">Low to High</option>
               <option value="highr">High to Low</option>
             </select>
@@ -151,6 +153,7 @@ function App() {
           <div className="filter">
             <h4>Discount</h4>
             <select className="drop" value={discountf} onChange={discountch}>
+              <option value="">Select discount</option>
               <option value="lowd">Low to High</option>
               <option value="highd">High to Low</option>
             </select>
@@ -158,6 +161,7 @@ function App() {
           <div className="filter">
             <h4>Price</h4>
             <select className="drop" value={pricef} onChange={pricech}>
+              <option value="">Select range</option>
               <option value="low">Low to High</option>
               <option value="high">High to Low</option>
             </select>
@@ -176,6 +180,7 @@ function App() {
               <div className="filter">
                 <h4>Brand</h4>
                 <select className="dropb" value={brandf} onChange={brandch}>
+                  <option value="">Select brand</option>
                   {brand.map((item, index) => (
                     <option key={index} value={item}>
                       {item}
