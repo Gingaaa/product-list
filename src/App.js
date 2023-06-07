@@ -190,6 +190,9 @@ function App() {
                 <button className="clear" onClick={clearfilter}>
                   Clear filter
                 </button>
+                <button className="clear" onClick={()=>setAdded(0)}>
+                  Empty Cart
+                </button>
               </div>
             </div>
             {data.map((item, index) => (
