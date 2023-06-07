@@ -26,15 +26,11 @@ function App() {
   const categorych = (event) => {
     setCategoryf(event.target.value);
     setData(save.filter((item) => item.category == event.target.value));
-    if (brandf != "" || ratingf != "" || discountf != "" || pricef != "") {
+    if (brandf != "") {
+      console.log("gtt");
       setData(
         save.filter(
-          (item) =>
-            item.category == event.target.value &&
-            (item.brand === brandf ||
-              item.rating >= ratingf ||
-              item.discountPercentage >= discountf ||
-              item.price <= pricef)
+          (item) => item.category == event.target.value && item.brand == brandf
         )
       );
     }
