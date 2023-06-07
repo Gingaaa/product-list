@@ -119,9 +119,9 @@ function App() {
             <h4>Price</h4>
             <select className="drop" value={pricef} onChange={pricech}>
               <option value="1000">Under &#8377;1,000</option>
-              <option value="5000">&#8377;1,000 - &#8377;5,000</option>
-              <option value="10000">&#8377;5,000 - &#8377;10,000</option>
-              <option value="20000">&#8377;10,000 - &#8377;20,000</option>
+              <option value="5000">Under &#8377;5,000</option>
+              <option value="10000">Under &#8377;10,000</option>
+              <option value="20000">Under &#8377;20,000</option>
               <option value="over">Over &#8377;20,000</option>
             </select>
           </div>
