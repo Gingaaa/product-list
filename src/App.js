@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import axios from "axios";
 import cart from "./assets/images/shopping-cart.png";
+import carts from "./assets/images/cart.png";
 import star from "./assets/images/star.png";
 import plus from "./assets/images/plus.png";
 import minus from "./assets/images/minus.png";
@@ -176,16 +177,16 @@ function App() {
                   ) : null}
                   <div className="additem">
                     <img
-                      src={plus}
+                      src={carts}
                       onClick={() => setAdded(added + 1)}
                       className="plus"
                     />
-                    <span></span>
-                    <img
+                    <span className="carttext"> Add to cart</span>
+                    {/* <img
                       src={minus}
                       onClick={() => setAdded(added - 1)}
                       className="minus"
-                    />
+                    /> */}
                   </div>
                 </div>
               </div>

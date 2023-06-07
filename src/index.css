@@ -149,8 +149,9 @@ body {
   padding-bottom: 14px;
 }
 .plus {
-  width: 40px;
-  height: 40px;
+  width: 26px;
+  height: 26px;
+  filter: invert(1);
 }
 .minus {
   width: 25px;
@@ -159,4 +160,15 @@ body {
 .additem {
   display: flex;
   align-items: center;
+  width: 150px;
+  justify-content: space-around;
+  background-color: #ffaf2e;
+  border-radius: 5px;
+  padding: 5px;
+  margin-top: 5px;
+}
+.carttext {
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
 }
