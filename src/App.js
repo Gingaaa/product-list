@@ -2,13 +2,11 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import axios from "axios";
 import cart from "./assets/images/shopping-cart.png";
-import selfie from "./assets/images/selfie6.jpg";
 import star from "./assets/images/star.png";
 import plus from "./assets/images/plus.png";
 import minus from "./assets/images/minus.png";
 
 function App() {
-  const [selectedOption, setSelectedOption] = useState("");
   const [data, setData] = useState([]);
   const [brand, setBrand] = useState([]);
   const [save, setSave] = useState([]);
