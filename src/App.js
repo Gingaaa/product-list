@@ -86,6 +86,10 @@ function App() {
     }
   };
 
+  const clearfilter = ()=>{
+    setData(save);
+  }
+
   
 
   const fetchData = async () => {
@@ -169,6 +173,7 @@ function App() {
                     </option>
                   ))}
                 </select>
+                <button className="clear" onClick={clearfilter}>Clear filter</button>
               </div>
             </div>
             {data.map((item, index) => (
