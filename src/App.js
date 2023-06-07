@@ -21,6 +21,7 @@ function App() {
   const brandch = (event) => {
     setbrandf(event.target.value);
     setData(save.filter((item) => item.brand == event.target.value));
+    console.log(event.target.value);
   };
   const categorych = (event) => {
     setCategoryf(event.target.value);
@@ -30,7 +31,7 @@ function App() {
         save.filter(
           (item) =>
             item.category == event.target.value &&
-            (item.brand == brandf ||
+            (item.brand === brandf ||
               item.rating >= ratingf ||
               item.discountPercentage >= discountf ||
               item.price <= pricef)
