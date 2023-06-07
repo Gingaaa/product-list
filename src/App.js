@@ -22,13 +22,19 @@ function App() {
   const brandch = (event) => {
     setbrandf(event.target.value);
     setData(save.filter((item) => item.brand == event.target.value));
-    console.log(event.target.value);
+    if (categoryf != "") {
+      setData(
+        save.filter(
+          (item) =>
+            item.category == categoryf && item.brand == event.target.value
+        )
+      );
+    }
   };
   const categorych = (event) => {
     setCategoryf(event.target.value);
     setData(save.filter((item) => item.category == event.target.value));
     if (brandf != "") {
-      console.log("gtt");
       setData(
         save.filter(
           (item) => item.category == event.target.value && item.brand == brandf
@@ -51,6 +57,16 @@ function App() {
     if (event.target.value === "over") {
       setData(save.filter((item) => item.price > event.target.value));
       console.log(event.target.value);
+    } else if (event.target.value === "low") {
+      const sortedData = [...save].sort((a, b) => {
+        return a.price - b.price;
+      });
+      setData(sortedData);
+    } else if (event.target.value === "high") {
+      const sortedData = [...save].sort((a, b) => {
+        return b.price - a.price;
+      });
+      setData(sortedData);
     } else {
       setData(save.filter((item) => item.price <= event.target.value));
       console.log(event.target.value);
@@ -125,6 +141,8 @@ function App() {
               <option value="10000">Under &#8377;10,000</option>
               <option value="20000">Under &#8377;20,000</option>
               <option value="over">Over &#8377;20,000</option>
+              <option value="low">Low to High</option>
+              <option value="high">High to Low</option>
             </select>
           </div>
         </div>
